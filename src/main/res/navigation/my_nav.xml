@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.app_v10.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_controlFragment3"
+            app:destination="@id/controlFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_firstFragment"
+            app:destination="@id/firstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/controlFragment"
+        android:name="com.example.app_v10.ControlFragment"
+        android:label="fragment_control"
+        tools:layout="@layout/fragment_control" >
+        <action
+            android:id="@+id/action_controlFragment_to_consultFragment"
+            app:destination="@id/consultFragment" />
+        <action
+            android:id="@+id/action_controlFragment_to_firstFragment"
+            app:destination="@id/firstFragment" />
+        <action
+            android:id="@+id/action_controlFragment_to_editFragment"
+            app:destination="@id/editFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/firstFragment"
+        android:name="com.example.app_v10.FirstFragment"
+        android:label="fragment_first"
+        tools:layout="@layout/fragment_first" >
+        <action
+            android:id="@+id/action_firstFragment_to_secondFragment"
+            app:destination="@id/secondFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/editDialogFragment"
+        android:name="com.example.app_v10.EditDialogFragment"
+        android:label="EditDialogFragment" />
+    <fragment
+        android:id="@+id/consultFragment"
+        android:name="com.example.app_v10.ConsultFragment"
+        android:label="fragment_consult"
+        tools:layout="@layout/fragment_consult" />
+    <fragment
+        android:id="@+id/secondFragment"
+        android:name="com.example.app_v10.SecondFragment"
+        android:label="fragment_second"
+        tools:layout="@layout/fragment_second" >
+        <action
+            android:id="@+id/action_secondFragment_to_controlFragment"
+            app:destination="@id/controlFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editFragment"
+        android:name="com.example.app_v10.EditFragment"
+        android:label="fragment_edit"
+        tools:layout="@layout/fragment_edit" />
+</navigation>
